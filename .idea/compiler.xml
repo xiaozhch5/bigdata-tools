@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="zookeeper" />
+        <module name="mybatis" />
+        <module name="thread-learning" />
+        <module name="kudu" />
+        <module name="impala" />
+        <module name="flink" />
+        <module name="util" />
+        <module name="kafka" />
+        <module name="thrift" />
+        <module name="mysql" />
+        <module name="hadoop" />
+        <module name="hbase" />
+        <module name="base" />
+        <module name="pulsar" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="base" target="1.7" />
+      <module name="bigdata-2" target="1.7" />
+      <module name="flink" target="1.8" />
+      <module name="hadoop" target="1.7" />
+      <module name="hbase" target="1.7" />
+      <module name="impala" target="1.7" />
+      <module name="kafka" target="8" />
+      <module name="kudu" target="1.7" />
+      <module name="mybatis" target="1.7" />
+      <module name="mysql" target="1.7" />
+      <module name="pulsar" target="8" />
+      <module name="thread-learning" target="1.7" />
+      <module name="thrift" target="1.7" />
+      <module name="util" target="8" />
+      <module name="zookeeper" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="flink" options="-Xpkginfo:always" />
+    </option>
+  </component>
+</project>

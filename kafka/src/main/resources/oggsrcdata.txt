@@ -1,0 +1,1 @@
+{"after":{"ACCT_ID":"1","ACCT_NAME":"1232","CUST_ID":"1","STATUS_CD":"I","STATUS_DATE":"2021-01-08 17:30:52.00356"},"before":{"ACCT_ID":"1","ACCT_NAME":"1232","CUST_ID":"1","STATUS_CD":"I","STATUS_DATE":"2021-01-08 17:30:52.00355"},"current_ts":"2021-01-08 17:30:52.00356","op_ts":"2021-01-08 17:30:52.00356","op_type":"I","primary_keys":["ACCT_ID"],"table":"ACCOUNT"}

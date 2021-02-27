@@ -1,6 +1,6 @@
 package com.zh.ch.bigdata.mysql.util;
 
-import com.zh.ch.bigdata.exception.ProjectException;
+import com.zh.ch.bigdata.base.util.exception.ProjectException;
 import junit.framework.TestCase;
 
 import java.io.IOException;

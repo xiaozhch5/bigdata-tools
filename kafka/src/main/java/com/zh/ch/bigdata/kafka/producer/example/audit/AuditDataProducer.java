@@ -1,9 +1,8 @@
 package com.zh.ch.bigdata.kafka.producer.example.audit;
 
-import com.zh.ch.bigdata.base.util.java.PropertiesAnalyzeUtil;
-import com.zh.ch.bigdata.base.util.java.RandomStringUtil;
+import com.zh.ch.bigdata.base.util.properties.PropertiesAnalyzeUtil;
+import com.zh.ch.bigdata.base.util.strings.RandomStringUtil;
 import com.zh.ch.bigdata.kafka.util.AbstractKafkaProducer;
-import com.zh.ch.bigdata.kafka.util.IKafkaProducer;
 import com.zh.ch.bigdata.kafka.util.KafkaClient;
 import com.zh.ch.bigdata.kafka.util.KafkaConfigEnv;
 import lombok.Getter;

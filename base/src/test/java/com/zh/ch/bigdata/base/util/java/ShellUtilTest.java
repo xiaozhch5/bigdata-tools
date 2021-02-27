@@ -1,5 +1,8 @@
 package com.zh.ch.bigdata.base.util.java;
 
+import com.zh.ch.bigdata.base.util.shell.ClientHost;
+import com.zh.ch.bigdata.base.util.shell.ShellResult;
+import com.zh.ch.bigdata.base.util.shell.ShellUtil;
 import junit.framework.TestCase;
 
 public class ShellUtilTest extends TestCase {

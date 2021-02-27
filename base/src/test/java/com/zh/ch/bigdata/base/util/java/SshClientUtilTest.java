@@ -1,5 +1,6 @@
 package com.zh.ch.bigdata.base.util.java;
 
+import com.zh.ch.bigdata.base.util.shell.SshClientUtil;
 import junit.framework.TestCase;
 
 import java.io.InputStream;

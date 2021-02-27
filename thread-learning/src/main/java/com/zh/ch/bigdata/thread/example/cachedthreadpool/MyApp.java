@@ -13,23 +13,24 @@ public class MyApp {
     public static void main(String[] args) throws InterruptedException {
         // 不允许下面这样子做
         ExecutorService cachedThreadPool = Executors.newFixedThreadPool(20);
-        for (int i=0;i<10;i++){
+        for (int i = 0; i < 10; i++) {
             final int finalI = i;
-            cachedThreadPool.execute(new Runnable() {
-                @Override
-                public void run() {
-                    try {
-                        Thread.sleep(10);
-                        te(Thread.currentThread().getName()+"   正在处理："+ finalI);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                }
-            });
+            cachedThreadPool.execute(
+                    new Runnable() {
+                        @Override
+                        public void run() {
+                            try {
+                                Thread.sleep(10);
+                                te(Thread.currentThread().getName() + "   正在处理：" + finalI);
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    });
         }
-        //提交任务，
+        // 提交任务，
         cachedThreadPool.shutdown();
-        //等待所有子线程处理完成，超过15秒则不等待，让他异步处理。
+        // 等待所有子线程处理完成，超过15秒则不等待，让他异步处理。
         boolean b = cachedThreadPool.awaitTermination(15000, TimeUnit.MILLISECONDS);
     }
 

@@ -3,7 +3,6 @@ package com.zh.ch.bigdata.springboot.manager.mysql.controller;
 import com.zh.ch.bigdata.springboot.manager.mysql.bean.ListParams;
 import com.zh.ch.bigdata.springboot.manager.mysql.service.DataPrimaryKeyChangedRecordService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -22,11 +21,9 @@ public class DataPrimarykeyChangedRecordController {
     @Autowired
     DataPrimaryKeyChangedRecordService dataPrimaryKeyChangedRecordService;
 
-    @RequestMapping(value = "/TableNameAndPrimaryKey", method = RequestMethod.POST)
+    @RequestMapping(value = "/tableNameAndPrimaryKey", method = RequestMethod.POST)
     @ResponseBody
-    public void deleteByPrimaryKey(@RequestBody ListParams param){
-    dataPrimaryKeyChangedRecordService.deleteByPrimaryKey(param.getPrimaryKey());
+    public int deleteByPrimaryKey(@RequestBody ListParams param){
+    return dataPrimaryKeyChangedRecordService.deleteByPrimaryKey(param.getPrimaryKey());
     }
-
-
 }

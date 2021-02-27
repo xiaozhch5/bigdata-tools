@@ -10,9 +10,10 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
         ExecutionEnvironment executionEnvironment = ExecutionEnvironment.getExecutionEnvironment();
+        executionEnvironment.setParallelism(3);
         BatchTableEnvironment batchTableEnvironment = BatchTableEnvironment.create(executionEnvironment);
 
-        DataSet<String> input = executionEnvironment.readTextFile("D:\\bigdata\\bigdata\\flink\\src\\main\\resources\\score.csv");
+        DataSet<String> input = executionEnvironment.readTextFile("C:\\Users\\hadoop\\company\\bigdata\\bigdata-2\\flink\\src\\main\\resources\\score.csv");
         DataSet<PlayerData> topInput = input.map(new MapFunction<String, PlayerData>() {
             @Override
             public PlayerData map(String s) throws Exception {

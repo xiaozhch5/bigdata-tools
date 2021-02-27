@@ -19,7 +19,9 @@ import java.util.Objects;
 public class MessageConsumer {
 
     public String getResource(String fileName) {
-        return Objects.requireNonNull(this.getClass().getClassLoader().getResource(fileName)).toString().substring(6);
+        return Objects.requireNonNull(this.getClass().getClassLoader().getResource(fileName))
+                .toString()
+                .substring(6);
     }
 
     public static void main(String[] args) throws IOException, ProjectException {
@@ -27,11 +29,13 @@ public class MessageConsumer {
         MessageConsumer receiver = new MessageConsumer();
         String kafkaConfigFilePath = receiver.getResource("kafka-config.properties");
         Consumer<String, String> consumer = KafkaClient.buildConsumer(kafkaConfigFilePath);
-            consumer.subscribe(Collections.singletonList("allintopic"));
+        consumer.subscribe(Collections.singletonList("un_account_topic"));
         while (true) {
             ConsumerRecords<String, String> records = consumer.poll(1L);
             for (ConsumerRecord<String, String> record : records) {
-                System.out.printf("offset = %d, key = %s, value = %s%n", record.offset(), record.key(), record.value());
+                System.out.printf(
+                        "offset = %d, key = %s, value = %s%n",
+                        record.offset(), record.key(), record.value());
             }
         }
     }

@@ -1,0 +1,4 @@
+The system must architecturally support any hardware and operating system, e.g.
+RHEL, SLES, Ubuntu, Windows, etc. Components which are inherently dependent
+on a platform (e.g., components dealing with yum, rpm packages, debian packages,
+etc) should be pluggable with well-defined interfaces.

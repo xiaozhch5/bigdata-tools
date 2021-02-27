@@ -25,6 +25,9 @@
       <module>base</module>
     <module>mybatis</module>
       <module>thread-learning</module>
+    <module>springboot-manager</module>
+      <module>elasticsearch</module>
+      <module>google-guice</module>
   </modules>
 
   <name>bigdata</name>

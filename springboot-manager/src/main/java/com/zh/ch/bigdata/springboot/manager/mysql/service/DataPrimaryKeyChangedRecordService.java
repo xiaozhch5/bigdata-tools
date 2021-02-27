@@ -2,6 +2,7 @@ package com.zh.ch.bigdata.springboot.manager.mysql.service;
 
 import com.zh.ch.bigdata.springboot.manager.mysql.dao.DataPrimarykeyChangedRecordMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.stereotype.Service;
 
 /**
@@ -10,6 +11,7 @@ import org.springframework.stereotype.Service;
  * @date 2021/01/11
  */
 @Service
+@EnableAsync
 public class DataPrimaryKeyChangedRecordService {
 
     @Autowired

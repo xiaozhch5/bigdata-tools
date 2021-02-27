@@ -21,51 +21,50 @@ public class UserDefineThreadPool {
 
         final ArrayBlockingQueue<String> q = new ArrayBlockingQueue<>(100);
 
+        ThreadFactory namedThreadFactory =
+                new ThreadFactoryBuilder().setNameFormat("thread-%d").build();
+        ExecutorService taskExe =
+                new ThreadPoolExecutor(
+                        10,
+                        20,
+                        200L,
+                        TimeUnit.MILLISECONDS,
+                        new LinkedBlockingQueue<Runnable>(),
+                        namedThreadFactory);
 
-        ThreadFactory namedThreadFactory = new ThreadFactoryBuilder().setNameFormat("thread-%d").build();
-        ExecutorService taskExe = new ThreadPoolExecutor(
-                10,
-                20,
-                200L,
-                TimeUnit.MILLISECONDS,
-                new LinkedBlockingQueue<Runnable>(),
-                namedThreadFactory);
+        taskExe.submit(
+                new Runnable() {
+                    @Override
+                    public void run() {
+                        int i = 0;
+                        while (true) {
+                            Random r = new Random();
+                            i = r.nextInt(10);
+                            try {
+                                q.put(String.valueOf(i));
+                                System.out.println(Thread.currentThread().getName() + "写入-->" + i);
+                            } catch (InterruptedException e) {
 
-        taskExe.submit(new Runnable() {
-            @Override
-            public void run() {
-                int i = 0;
-                while (true) {
-                    Random r = new Random();
-                    i = r.nextInt(10);
-                    try {
-                        q.put(String.valueOf(i));
-                        System.out.println(Thread.currentThread().getName()+"写入-->" + i);
-                    } catch (InterruptedException e) {
-
-                    }
-                }
-            }
-        });
-
-
-
-        taskExe.submit(new Runnable() {
-            @Override
-            public void run() {
-                while (true) {
-                    try {
-                        if (!q.isEmpty()) {
-                            System.out.println(Thread.currentThread().getName() + "读取-->" + q.take());
+                            }
                         }
-                    } catch (Exception e) {
-                        e.printStackTrace();
                     }
-                }
-            }
-        });
+                });
+
+        taskExe.submit(
+                new Runnable() {
+                    @Override
+                    public void run() {
+                        while (true) {
+                            try {
+                                if (!q.isEmpty()) {
+                                    System.out.println(
+                                            Thread.currentThread().getName() + "读取-->" + q.take());
+                                }
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    }
+                });
     }
-
-
-
 }

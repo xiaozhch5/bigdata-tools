@@ -1,6 +1,5 @@
 package com.zh.ch.bigdata.mysql.example;
-
-import com.zh.ch.bigdata.exception.ProjectException;
+import com.zh.ch.bigdata.base.util.exception.ProjectException;
 import com.zh.ch.bigdata.mysql.util.AbstractMysqlOperation;
 import com.zh.ch.bigdata.mysql.util.IMysqlOperation;
 import org.slf4j.Logger;
@@ -56,13 +55,13 @@ public class MyMysqlOperationImpl extends AbstractMysqlOperation {
             LOGGER.info("sql语句执行成功");
             while (rs.next()) {
                 // 通过字段检索并打印数据
-                int id = rs.getInt("a");
-                System.out.println(id);
+                String primaryKey = rs.getString("column_name");
+                System.out.println(primaryKey);
             }
             rs.close();
             stmt.close();
             conn.close();
-        } catch (ClassNotFoundException | SQLException | ProjectException | IOException e) {
+        } catch (ClassNotFoundException | SQLException | IOException e) {
             LOGGER.error("表查询异常，sql语句为 {}", sql);
             throw e;
         }
@@ -103,6 +102,6 @@ public class MyMysqlOperationImpl extends AbstractMysqlOperation {
 
     public static void main(String[] args) throws Exception {
         IMysqlOperation myOperationImpl = new MyMysqlOperationImpl();
-        myOperationImpl.queryTable("select * from test.test");
+        myOperationImpl.queryTable("select column_name from information_schema.columns where table_schema='iahdb' and table_name='ct_cust_info' and column_key='PRI'");
     }
 }

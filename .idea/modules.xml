@@ -4,12 +4,15 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/base/base.iml" filepath="$PROJECT_DIR$/base/base.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/bigdata-2.iml" filepath="$PROJECT_DIR$/.idea/bigdata-2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/elasticsearch/elasticsearch.iml" filepath="$PROJECT_DIR$/elasticsearch/elasticsearch.iml" />
       <module fileurl="file://$PROJECT_DIR$/flink/flink.iml" filepath="$PROJECT_DIR$/flink/flink.iml" />
+      <module fileurl="file://$PROJECT_DIR$/google-guice/google-guice.iml" filepath="$PROJECT_DIR$/google-guice/google-guice.iml" />
       <module fileurl="file://$PROJECT_DIR$/hadoop/hadoop.iml" filepath="$PROJECT_DIR$/hadoop/hadoop.iml" />
       <module fileurl="file://$PROJECT_DIR$/hbase/hbase.iml" filepath="$PROJECT_DIR$/hbase/hbase.iml" />
       <module fileurl="file://$PROJECT_DIR$/impala/impala.iml" filepath="$PROJECT_DIR$/impala/impala.iml" />
       <module fileurl="file://$PROJECT_DIR$/kafka/kafka.iml" filepath="$PROJECT_DIR$/kafka/kafka.iml" />
       <module fileurl="file://$PROJECT_DIR$/kudu/kudu.iml" filepath="$PROJECT_DIR$/kudu/kudu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-manager/manager.iml" filepath="$PROJECT_DIR$/springboot-manager/manager.iml" />
       <module fileurl="file://$PROJECT_DIR$/mybatis/mybatis.iml" filepath="$PROJECT_DIR$/mybatis/mybatis.iml" />
       <module fileurl="file://$PROJECT_DIR$/mysql/mysql.iml" filepath="$PROJECT_DIR$/mysql/mysql.iml" />
       <module fileurl="file://$PROJECT_DIR$/pulsar/pulsar.iml" filepath="$PROJECT_DIR$/pulsar/pulsar.iml" />

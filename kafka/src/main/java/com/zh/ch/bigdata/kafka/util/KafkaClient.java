@@ -1,8 +1,8 @@
 package com.zh.ch.bigdata.kafka.util;
 
 import com.zh.ch.bigdata.base.util.exception.ProjectException;
-import com.zh.ch.bigdata.base.util.java.PropertiesAnalyzeUtil;
-import com.zh.ch.bigdata.base.util.java.StringJointUtil;
+import com.zh.ch.bigdata.base.util.properties.PropertiesAnalyzeUtil;
+import com.zh.ch.bigdata.base.util.strings.StringJointUtil;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.slf4j.Logger;

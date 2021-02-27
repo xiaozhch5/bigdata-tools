@@ -31,7 +31,7 @@ public class CommonConsumer {
         kfkProperties.put("enable.auto.commit", true);
         consumer = new KafkaConsumer<>(kfkProperties);
 // consumer.subscribe(Collections.singletonList("kafkatest"));
-        String topic = "gdkafkatopic66";
+        String topic = "gdkafkatopic1101";
         TopicPartition partition = new TopicPartition(topic, 1);
         List<TopicPartition> lists = new ArrayList<TopicPartition>();
         lists.add(partition);

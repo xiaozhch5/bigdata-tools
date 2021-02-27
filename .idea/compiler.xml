@@ -2,17 +2,21 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="zookeeper" />
+        <module name="manager" />
         <module name="mybatis" />
         <module name="thread-learning" />
         <module name="kudu" />
         <module name="impala" />
+        <module name="google-guice" />
         <module name="flink" />
         <module name="util" />
+        <module name="elasticsearch" />
         <module name="kafka" />
         <module name="thrift" />
         <module name="mysql" />
@@ -25,14 +29,17 @@
     <bytecodeTargetLevel>
       <module name="base" target="1.7" />
       <module name="bigdata-2" target="1.7" />
+      <module name="elasticsearch" target="8" />
       <module name="flink" target="1.8" />
+      <module name="google-guice" target="8" />
       <module name="hadoop" target="1.7" />
       <module name="hbase" target="1.7" />
       <module name="impala" target="1.7" />
       <module name="kafka" target="8" />
       <module name="kudu" target="1.7" />
+      <module name="manager" target="1.8" />
       <module name="mybatis" target="1.7" />
-      <module name="mysql" target="1.7" />
+      <module name="mysql" target="8" />
       <module name="pulsar" target="8" />
       <module name="thread-learning" target="1.7" />
       <module name="thrift" target="1.7" />
@@ -43,6 +50,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="flink" options="-Xpkginfo:always" />
+      <module name="manager" options="-parameters" />
     </option>
   </component>
 </project>

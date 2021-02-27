@@ -1,7 +1,7 @@
 package com.zh.ch.bigdata.kafka.producer.example.ogg;
 
 import com.zh.ch.bigdata.base.util.exception.ProjectException;
-import com.zh.ch.bigdata.base.util.java.PropertiesAnalyzeUtil;
+import com.zh.ch.bigdata.base.util.properties.PropertiesAnalyzeUtil;
 import com.zh.ch.bigdata.kafka.util.AbstractKafkaProducer;
 import com.zh.ch.bigdata.kafka.util.KafkaClient;
 import com.zh.ch.bigdata.kafka.util.KafkaConfigEnv;

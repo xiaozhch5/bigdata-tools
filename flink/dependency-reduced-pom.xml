@@ -8,6 +8,7 @@
   <modelVersion>4.0.0</modelVersion>
   <artifactId>flink</artifactId>
   <name>flink</name>
+  <url>http://www.example.com</url>
   <build>
     <plugins>
       <plugin>
@@ -68,7 +69,6 @@
     </dependency>
   </dependencies>
   <properties>
-    <scala.binary.version>2.11</scala.binary.version>
     <flink.version>1.10.2</flink.version>
     <maven.compiler.source>1.7</maven.compiler.source>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

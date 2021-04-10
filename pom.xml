@@ -28,6 +28,7 @@
     <module>springboot-manager</module>
       <module>elasticsearch</module>
       <module>google-guice</module>
+    <module>c3p0</module>
   </modules>
 
   <name>bigdata</name>

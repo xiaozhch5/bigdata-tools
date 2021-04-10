@@ -51,14 +51,15 @@ public class MyMysqlOperationImpl extends AbstractMysqlOperation {
             Statement stmt;
             Connection conn = build();
             stmt = conn.createStatement();
-            ResultSet rs = stmt.executeQuery(sql);
-            LOGGER.info("sql语句执行成功");
-            while (rs.next()) {
-                // 通过字段检索并打印数据
-                String primaryKey = rs.getString("column_name");
-                System.out.println(primaryKey);
-            }
-            rs.close();
+            stmt.execute(sql);
+//            ResultSet rs = stmt.executeQuery(sql);
+//            LOGGER.info("sql语句执行成功");
+//            while (rs.next()) {
+//                // 通过字段检索并打印数据
+//                String primaryKey = rs.getString("request_context");
+//                System.out.println(primaryKey);
+//            }
+//            rs.close();
             stmt.close();
             conn.close();
         } catch (ClassNotFoundException | SQLException | IOException e) {
@@ -102,6 +103,6 @@ public class MyMysqlOperationImpl extends AbstractMysqlOperation {
 
     public static void main(String[] args) throws Exception {
         IMysqlOperation myOperationImpl = new MyMysqlOperationImpl();
-        myOperationImpl.queryTable("select column_name from information_schema.columns where table_schema='iahdb' and table_name='ct_cust_info' and column_key='PRI'");
+        myOperationImpl.queryTable("update wdp_2.request set request_context='安装服务' where request_id=477");
     }
 }

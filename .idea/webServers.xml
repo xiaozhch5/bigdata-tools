@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="54fe2ef4-0efd-4adc-8cf3-3e6dc78edbeb" name="compile-wdp">
+        <fileTransfer accessType="SFTP" host="10.45.47.68" port="7222" sshConfigId="5c6b9cba-1a26-4286-a034-cc8ffe75bbf9" sshConfig="root@10.45.47.68:7222 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

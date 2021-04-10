@@ -7,6 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="google-juice" />
         <module name="zookeeper" />
         <module name="manager" />
         <module name="mybatis" />
@@ -21,6 +22,7 @@
         <module name="thrift" />
         <module name="mysql" />
         <module name="hadoop" />
+        <module name="c3p0" />
         <module name="hbase" />
         <module name="base" />
         <module name="pulsar" />
@@ -29,9 +31,11 @@
     <bytecodeTargetLevel>
       <module name="base" target="1.7" />
       <module name="bigdata-2" target="1.7" />
+      <module name="c3p0" target="8" />
       <module name="elasticsearch" target="8" />
       <module name="flink" target="1.8" />
       <module name="google-guice" target="8" />
+      <module name="google-juice" target="8" />
       <module name="hadoop" target="1.7" />
       <module name="hbase" target="1.7" />
       <module name="impala" target="1.7" />

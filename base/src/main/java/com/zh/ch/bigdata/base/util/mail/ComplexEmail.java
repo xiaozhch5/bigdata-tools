@@ -13,6 +13,7 @@ import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
 import java.io.IOException;
 import java.security.GeneralSecurityException;
+import java.util.Date;
 import java.util.Properties;
 
 /**
@@ -38,6 +39,8 @@ public class ComplexEmail {
 
     public String mailConfigsFilePath;
 
+    public String img;
+
     public void setMailConfigs(String mailConfigsFilePath) throws ProjectException, IOException, ClassNotFoundException, GeneralSecurityException {
         this.mailConfigsFilePath = mailConfigsFilePath;
         // 1. 读取配置信息
@@ -58,6 +61,10 @@ public class ComplexEmail {
         this.userEmail = PropertiesAnalyzeUtil.getProperty(userConfigsFilePath, "userEmail");
         this.userAuthorizationCode = PropertiesAnalyzeUtil.getProperty(userConfigsFilePath, "userAuthorizationCode");
         this.targetEmail = PropertiesAnalyzeUtil.getProperty(userConfigsFilePath, "targetEmail");
+    }
+
+    public void setImgFilePath(String imgFilePath) {
+        this.img= imgFilePath;
     }
 
 
@@ -88,23 +95,23 @@ public class ComplexEmail {
         //收件人
         mimeMessage.setRecipient(Message.RecipientType.TO,new InternetAddress(targetEmail));
         //邮件标题
-        mimeMessage.setSubject("带图片和附件的邮件");
+        mimeMessage.setSubject("告警：房间中检测到人脸");
 
         //邮件内容
         //准备图片数据
         MimeBodyPart image = new MimeBodyPart();
-        DataHandler handler = new DataHandler(new FileDataSource("/home/xiaozhch5/Downloads/cover.png"));
+        DataHandler handler = new DataHandler(new FileDataSource(this.img));
         image.setDataHandler(handler);
-        image.setContentID("test.png"); //设置图片id
+        image.setContentID("face.png"); //设置图片id
 
         //准备文本
         MimeBodyPart text = new MimeBodyPart();
-        text.setContent("这是一段文本<img src='cid:test.png'>","text/html;charset=utf-8");
+        text.setContent("人脸图像<img src='cid:face.png'>","text/html;charset=utf-8");
 
         //附件
-        MimeBodyPart appendix = new MimeBodyPart();
-        appendix.setDataHandler(new DataHandler(new FileDataSource("/home/xiaozhch5/Downloads/cover.png")));
-        appendix.setFileName("test.txt");
+//        MimeBodyPart appendix = new MimeBodyPart();
+//        appendix.setDataHandler(new DataHandler(new FileDataSource(this.img)));
+//        appendix.setFileName("context.txt");
 
         //拼装邮件正文
         MimeMultipart mimeMultipart = new MimeMultipart();
@@ -118,7 +125,7 @@ public class ComplexEmail {
 
         //拼接附件
         MimeMultipart allFile = new MimeMultipart();
-        allFile.addBodyPart(appendix);//附件
+//        allFile.addBodyPart(appendix);//附件
         allFile.addBodyPart(contentText);//正文
         allFile.setSubType("mixed"); //正文和附件都存在邮件中，所有类型设置为mixed
 
@@ -131,9 +138,13 @@ public class ComplexEmail {
 
     public static void main(String[] args) throws ProjectException, MessagingException, GeneralSecurityException, IOException, ClassNotFoundException {
         ComplexEmail complexEmail = new ComplexEmail();
-        complexEmail.setMailConfigs("/data/bigdata/bigdata-tools/base/src/main/resources/testMailConfigs.properties");
-        complexEmail.setUserConfigs("/data/bigdata/bigdata-tools/base/src/main/resources/userConfigs.properties");
+        complexEmail.setMailConfigs(args[0]);
+        complexEmail.setUserConfigs(args[1]);
+        complexEmail.setImgFilePath(args[2]);
+//        complexEmail.setMailConfigs("/data/bigdata/bigdata-tools/base/src/main/resources/testMailConfigs.properties");
+//        complexEmail.setUserConfigs("/data/bigdata/bigdata-tools/base/src/main/resources/userConfigs.properties");
         complexEmail.send();
+        System.out.println(new Date() + ":" + "房间中检测到人脸，已发送此人脸图片至指定邮箱");
     }
 
 

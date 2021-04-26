@@ -15,6 +15,7 @@
         <module name="kudu" />
         <module name="impala" />
         <module name="google-guice" />
+        <module name="dom4j" />
         <module name="flink" />
         <module name="util" />
         <module name="elasticsearch" />
@@ -32,6 +33,7 @@
       <module name="base" target="1.7" />
       <module name="bigdata-2" target="1.7" />
       <module name="c3p0" target="8" />
+      <module name="dom4j" target="1.7" />
       <module name="elasticsearch" target="8" />
       <module name="flink" target="1.8" />
       <module name="google-guice" target="8" />

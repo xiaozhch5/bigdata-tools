@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/base/base.iml" filepath="$PROJECT_DIR$/base/base.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/bigdata-2.iml" filepath="$PROJECT_DIR$/.idea/bigdata-2.iml" />
       <module fileurl="file://$PROJECT_DIR$/c3p0/c3p0.iml" filepath="$PROJECT_DIR$/c3p0/c3p0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dom4j/dom4j.iml" filepath="$PROJECT_DIR$/dom4j/dom4j.iml" />
       <module fileurl="file://$PROJECT_DIR$/elasticsearch/elasticsearch.iml" filepath="$PROJECT_DIR$/elasticsearch/elasticsearch.iml" />
       <module fileurl="file://$PROJECT_DIR$/flink/flink.iml" filepath="$PROJECT_DIR$/flink/flink.iml" />
       <module fileurl="file://$PROJECT_DIR$/google-guice/google-guice.iml" filepath="$PROJECT_DIR$/google-guice/google-guice.iml" />

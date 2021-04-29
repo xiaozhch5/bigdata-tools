@@ -30,6 +30,7 @@
       <module>google-guice</module>
     <module>c3p0</module>
       <module>dom4j</module>
+      <module>websocket</module>
   </modules>
 
   <name>bigdata</name>

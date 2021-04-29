@@ -19,6 +19,7 @@
         <module name="flink" />
         <module name="util" />
         <module name="elasticsearch" />
+        <module name="websocket" />
         <module name="kafka" />
         <module name="thrift" />
         <module name="mysql" />
@@ -50,6 +51,7 @@
       <module name="thread-learning" target="1.7" />
       <module name="thrift" target="1.7" />
       <module name="util" target="8" />
+      <module name="websocket" target="1.5" />
       <module name="zookeeper" target="1.7" />
     </bytecodeTargetLevel>
   </component>

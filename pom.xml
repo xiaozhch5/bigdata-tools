@@ -23,14 +23,15 @@
     <module>kudu</module>
       <module>mysql</module>
       <module>base</module>
-    <module>mybatis</module>
+<!--    <module>mybatis</module>-->
       <module>thread-learning</module>
-    <module>springboot-manager</module>
+<!--    <module>springboot-manager</module>-->
       <module>elasticsearch</module>
       <module>google-guice</module>
     <module>c3p0</module>
       <module>dom4j</module>
       <module>websocket</module>
+    <module>flink-learning</module>
   </modules>
 
   <name>bigdata</name>

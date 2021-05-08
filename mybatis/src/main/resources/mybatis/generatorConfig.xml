@@ -5,7 +5,7 @@
 <generatorConfiguration>
 
     <properties resource="mybatis/generatorConfig.properties"/>
-    <classPathEntry location="src/main/resources/mysql-java-jdbc/mysql-connector-java-5.1.49.jar"/>
+    <classPathEntry location="mybatis/src/main/resources/mysql-java-jdbc/mysql-connector-java-5.1.49.jar"/>
     <context id="default"   defaultModelType="flat">
 
         <!--

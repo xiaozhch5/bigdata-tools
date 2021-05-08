@@ -9,10 +9,10 @@ import java.sql.SQLException;
 
 public class MysqlClientTest extends TestCase {
 
-    public void testBuild() throws ClassNotFoundException, SQLException, ProjectException, IOException {
-        MysqlClient m = new MysqlClient();
-        Connection connection = m.build();
-
-
-    }
+//    public void testBuild() throws ClassNotFoundException, SQLException, ProjectException, IOException {
+//        MysqlClient m = new MysqlClient();
+//        Connection connection = m.build();
+//
+//
+//    }
 }

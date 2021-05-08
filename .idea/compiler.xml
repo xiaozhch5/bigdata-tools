@@ -10,7 +10,6 @@
         <module name="google-juice" />
         <module name="zookeeper" />
         <module name="manager" />
-        <module name="mybatis" />
         <module name="thread-learning" />
         <module name="kudu" />
         <module name="impala" />
@@ -28,6 +27,7 @@
         <module name="hbase" />
         <module name="base" />
         <module name="pulsar" />
+        <module name="flink-learning" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -37,6 +37,7 @@
       <module name="dom4j" target="1.7" />
       <module name="elasticsearch" target="8" />
       <module name="flink" target="1.8" />
+      <module name="flink-learning" target="1.8" />
       <module name="google-guice" target="8" />
       <module name="google-juice" target="8" />
       <module name="hadoop" target="1.7" />

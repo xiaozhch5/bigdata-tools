@@ -109,7 +109,7 @@ public class CountNumsOfClicksJob {
                                     .withUrl("jdbc:mysql://hadoop3.lrting.top:3306/flinktest")
                                     .withDriverName("com.mysql.jdbc.Driver")
                                     .withUsername("root")
-                                    .withPassword("m98Edicines-")
+                                    .withPassword("xxx")
                                     .build()
                     ));
 

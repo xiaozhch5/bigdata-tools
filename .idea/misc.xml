@@ -16,6 +16,7 @@
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/google-juice/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis/pom.xml" />
       </set>
     </option>
   </component>

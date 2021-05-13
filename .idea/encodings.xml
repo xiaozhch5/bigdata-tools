@@ -4,12 +4,16 @@
     <file url="file://$PROJECT_DIR$/base/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/base/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/c3p0/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/c3p0/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dom4j/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/elasticsearch/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/elasticsearch/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-learning/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink-learning/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/flink/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/google-guice/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/google-guice/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hadoop/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hadoop/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hbase/src/main/java" charset="UTF-8" />
